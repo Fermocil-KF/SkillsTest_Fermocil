@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRNDL</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            margin-bottom: 30px;
+        }
+        .restaurant-icon {
+            font-size: 50px;
+            color: #ff5722;
+        }
+        .menu-card {
+            margin-top: 20px;
+        }
+        .price {
+            text-align: right;
+        }
+        .opening-hours {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+        <div class="header text-center">
+            <i class="fas fa-utensils restaurant-icon"></i>
+            <div id="name1" class="display-4 fw-bold"></div>
+            <div id="owner" class="fs-5 mt-2"></div>
+            <div id="since" class="fs-6"></div>
+        </div>
+
+        <div class="menu-card">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th id="heading1" colspan="2"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="prod1"></td>
+                        <td id="price1" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod2"></td>
+                        <td id="price2" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod3"></td>
+                        <td id="price3" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod4"></td>
+                        <td id="price4" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod5"></td>
+                        <td id="price5" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod6"></td>
+                        <td id="price6" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod7"></td>
+                        <td id="price7" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod8"></td>
+                        <td id="price8" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod9"></td>
+                        <td id="price9" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod10"></td>
+                        <td id="price10" class="price"></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="opening-hours">
+            <i class ="fas fa-clock me-2"></i>
+            <span id="openingHours"></span>
+        </div>
+
+        <div class="text-center mt-4">
+            <span id="orderType" class="badge bg-primary"></span>
+        </div>
+    </div>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>

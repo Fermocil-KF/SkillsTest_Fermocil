@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    <title>PRNDL</title>
+    <style>
+        :root {
+            --primary-color:#ff5722;
+            --background-color: #f8f9fa;
+            --container-bg-color: #ffffff;
+            --navbar-bg-color: #ff5722;
+            --text-color: #212529;
+            --light-text-color: #ffffff; 
+            --border-color: #dee2e6;
+        }
+
+        .theme {
+            background-color: white;
+            color:black;
+        }
+
+        .navbar {
+            background-color: #ff5722;
+        }
+
+        .navbar-brand, .nav-link {
+            color:#212529;
+        }
+
+        .order-container {
+            background-color: var(--container-bg-color);
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+
+        .text-primary {
+            color: var(--primary-color);
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+        
+        .food-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 0.25px;
+            margin-right: 1px;
+        }
+
+        .menu-text {
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .form-check-label {
+            font-weight: bold;
+            flex-grow: 1;
+        }
+
+        .price-tag {
+            font-weight: 600;
+            color: black;
+            min-width: 80px;
+            text-align: right;
+        }
+
+        .back-btn {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 2px;
+        }
+
+    </style>
+</head>
+<body class="theme">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-utensils restaurant-icon"></i>PRNDL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="ordering_form.html">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container py-5">
+        <div class="order-container p-4 mb-4">
+            <h1 class="text-primary mb-4 text-center">Food Ordering System</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-primary mb-3">Menu:</h3>
+                    
+                    <div class="form-check menu-item">
+                        <img src="download.jfif" class="food-img" alt="Burger">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item1" value=9.00>
+                            <label class="form-check-label" for="item1">Burger</label>
+                            <div class="price-tag">$9.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check menu-item">
+                        <img src="download (1).jfif" class="food-img" alt="Pizza">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item2" value=11.00>
+                            <label class="form-check-label" for="item2">Pizza</label>
+                            <div class="price-tag">$11.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check menu-item">
+                        <img src="download (2).jfif" class="food-img" alt="Pasta">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item3" value=9.50>
+                            <label class="form-check-label" for="item3">Pasta</label>
+                            <div class="price-tag">$9.50</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check menu-item">
+                        <img src="Coke_330mL.webp" class="food-img" alt="Coke">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item4" value=1.00>
+                            <label class="form-check-label" for="item4">Coke</label>
+                            <div class="price-tag">$1.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check menu-item">
+                        <img src="download (3).jfif" class="food-img" alt="Sprite">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item5" value=1.00>
+                            <label class="form-check-label" for="item5">Sprite</label>
+                            <div class="price-tag">$1.00</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <h3 class="text-primary mb-3">Customer Details:</h3>
+                    <div class="mb-3">
+                        <label for="customer" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control" id="customer" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter your address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contact_number" class="form-label">Contact Number</label>
+                        <input type="text" class="form-control" id="contact_number" placeholder="Enter your contact number">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-grid gap-2 col-md-6 mx-auto mt-4">
+                <button class="btn btn-dark btn-lg" type="submit" py-click="create_order">Create Order</button>
+            </div>
+        </div>
+        
+        <div class="order-container p-4">
+            <h3 class="text-primary mb-3">Order Summary:</h3>
+            <div id="order_output1" class="mb-2"></div>
+            <div id="order_output2" class="mb-2"></div>
+            <div id="order_output3" class="mb-2"></div>
+            <div id="show" class="h4 text-primary mt-3"></div>
+        </div>
+    </div>
+    
+    <center>
+        <a href="index.html">
+            <button class="back-btn">Back to Home</button>
+        </a>
+    </center>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="py" src="main2.py"></script>
+</body>
+</html>
